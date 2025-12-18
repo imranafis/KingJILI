@@ -122,7 +122,7 @@ export default function App() {
     };
   }, [isJackpotActive]);
 
-  // Convert number to array for the boxes
+  // Convert number to array for the boxes 123
   const jackpotArray = jackpot.toString().padStart(8, "0").split("");
 
   const slides = [
