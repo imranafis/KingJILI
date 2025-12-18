@@ -16,7 +16,7 @@ export default function App() {
   const [regPassword, setRegPassword] = useState("");
 
   // Jackpot state
-  const [jackpot, setJackpot] = useState(2359446917);
+  const [jackpot, setJackpot] = useState(23596917);
   const [jackpotChange, setJackpotChange] = useState("+");
   const [isAnimating, setIsAnimating] = useState(false);
   const jackpotRef = useRef(jackpot);
@@ -77,7 +77,7 @@ export default function App() {
       } else {
         // Decrease animation
         let current = jackpotRef.current;
-        const target = Math.max(2000000000, current - changeAmount); // Don't go below 2 billion
+        const target = Math.max(20000000, current - changeAmount); // Don't go below 2 billion
         const steps = 30;
         const stepValue = Math.ceil(changeAmount / steps);
 
@@ -123,7 +123,7 @@ export default function App() {
   }, [isJackpotActive]);
 
   // Convert number to array for the boxes
-  const jackpotArray = jackpot.toString().padStart(10, "0").split("");
+  const jackpotArray = jackpot.toString().padStart(8, "0").split("");
 
   const slides = [
     { text: "বিনামূল্যে টাকা আয় করতে চান?", subtext: "৪টি আসাধারণ সুবিধা!" },
